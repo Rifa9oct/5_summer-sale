@@ -168,17 +168,27 @@
                         </div>
                     </div>
                     <!-- cart-2  -->
-
                     <div class="bg-white px-6 py-6 mt-6 w-[340px] rounded-lg">
                         <div id="li-container" class="list-decimal font-medium text-2xl">
 
                         </div>
                         <hr class="w-[294px] border-2 my-6">
-                        <h3 class="font-medium text-2xl">Total price: <span class="text-[#11111180]" id="total-price"></span></h3>
-                        <h3 class="font-medium text-2xl">Discount : <span class="text-[#11111180]" id="discount"></span></h3>
-                        <h3 class="font-medium text-2xl">Total: <span class="text-[#11111180]" id="total" ></span></h3>
+                        <h3 class="font-medium text-2xl">Total price: <span class="text-[#11111180]" id="total-price" >0</span><span class="text-[#11111180]">TK</span></h3>
+                        <h3 class="font-medium text-2xl">Discount : <span class="text-[#11111180]" id="discount" >0</span><span class="text-[#11111180]">TK</span></h3>
+                        <h3 class="font-medium text-2xl">Total: <span class="text-[#11111180]" id="total" >0</span><span class="text-[#11111180]">TK</span></h3>
                         <hr class="w-[294px] border-2 my-6">
-                        <button onclick="makePurchase()" id="purchase-btn" class="btn btn-secondary w-full font-semibold text-xl text-white" disabled>Make Purchase</button> 
+                        <button id="purchase-btn" onclick="my_modal_5.showModal()" class="btn btn-secondary w-full font-semibold text-xl text-white" disabled>Make Purchase</button> 
+                        <!-- modal -->
+                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                        <form method="dialog" class="modal-box">
+                            <img class="mx-auto" src="images/congo.png" alt="">
+                            <h1 class="font-bold text-5xl text-center">Congratulations</h1>
+                            <p class="pt-4 text-center">Your Purchase the product</p>
+                            <div class="modal-action">
+                            <button id="go-home" class="btn btn-secondary mx-auto text-white px-8">Go Home</button>
+                            </div>
+                        </form>
+                        </dialog>
                     </div>
                 </div> 
             </div>

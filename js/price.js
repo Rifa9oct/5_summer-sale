@@ -3,6 +3,12 @@ function handleClickBtn(data){
     const price = data.childNodes[9].innerText.split(' ')[0];
     total = parseFloat(total) + parseFloat(price);
     let totalTwoDecimal = total.toFixed(2);
+
+    document.getElementById('go-home').addEventListener('click',function(){
+        setInnerText('total-price',0);
+        setInnerText('discount',0);
+        setInnerText('total',0);
+    })
     setInnerText('total-price',totalTwoDecimal);
 
     // enable cupon-code btn
@@ -24,7 +30,6 @@ function handleClickBtn(data){
         })
     })
 
-   
     // enable purchaseBtn
     const purchaseBtn = document.getElementById('purchase-btn');
     if(totalTwoDecimal>0){
@@ -33,7 +38,6 @@ function handleClickBtn(data){
 
     // appendChild
     appendLi(data.childNodes[7].innerText);
-    // set totalPrice
 }
 
 function appendLi(name){
@@ -44,5 +48,5 @@ function appendLi(name){
 
 function setInnerText(id,value){
     const totalPrice = document.getElementById(id);
-    totalPrice.innerText = value + 'TK';
+    totalPrice.innerText = value;
 }
