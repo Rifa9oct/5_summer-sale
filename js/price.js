@@ -8,9 +8,9 @@ function handleClickBtn(data){
     document.getElementById('go-home').addEventListener('click',function(){
         // remove all prces
         total = 0;
-        setInnerText('total-price','00 ');
-        setInnerText('discount','00 ');
-        setInnerText('total','00 ');
+        setInnerText('total-price','0.00 ');
+        setInnerText('discount','0.00 ');
+        setInnerText('total','0.00 ');
 
         // remove li
         const childs = document.getElementById('li-container').childNodes;
